@@ -2,10 +2,10 @@ import java.util.Arrays;
 
 public class StatisticsCalculator {
     public static void main(String[] args) {
-        // Sample array of data
+        // Array of data
         double[] data = {12, 15, 14, 10, 18, 20, 13, 16, 11, 19};
 
-        // Step 1: Calculate the mean
+        // The mean
         double sum = 0;
         for (double value : data) {
             sum += value;
@@ -13,7 +13,7 @@ public class StatisticsCalculator {
         double mean = sum / data.length;
         System.out.println("Mean: " + mean);
 
-        // Step 2: Calculate the median
+        // The median
         Arrays.sort(data); // Sort the array to find the median
         double median;
         if (data.length % 2 == 0) {
@@ -23,7 +23,7 @@ public class StatisticsCalculator {
         }
         System.out.println("Median: " + median);
 
-        // Step 3: Calculate the standard deviation
+        // The standard deviation
         double sumOfSquaredDifferences = 0;
         for (double value : data) {
             sumOfSquaredDifferences += Math.pow(value - mean, 2);
